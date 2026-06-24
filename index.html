@@ -3,27 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon", type="image/png", href="LOGO_OFICIAL.svg">
+    <link rel="icon" type="image/svg+xml" href="LOGO_OFICIAL.svg">
     <title>Botica Vitanova</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; color: #333; }
-        header { background-color: #007bff; color: white; padding: 1rem 0; }
-        section { padding: 2rem; }
-        .btn-whatsapp { display: inline-block; background-color: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; }
-        footer { background-color: #f4f4f4; padding: 1rem; font-size: 0.9rem; }
-        .header-container {
-            display: flex; /* Esto pone los elementos en fila */
-            align-items: center; /* Esto los alinea verticalmente al centro */
-            justify-content: center; /* Esto los centra horizontalmente */
-            gap: 10px; /* Esto añade un poco de espacio entre el logo y el texto */
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="header-container">
-            <img src="LOGO_OFICIAL.svg" alt="Logo" style="max-width: 140px;">
+            <img src="LOGO_OFICIAL.svg" alt="Logo" class="logo-vitanova">
             <div>
                 <h1>Botica Vitanova</h1>
                 <p>¡TU SALUD EN MANOS DE PROFESIONALES!</p>
@@ -31,17 +19,34 @@
         </div>
     </header>
 
+    <section style="padding: 0;">
+        <img src="Portada_VitaNova.png" alt="Banner Botica Vitanova" class="banner-vitanova">
+    </section>
+
     <section id="servicios">
         <h2>Nuestros Servicios</h2>
         <p>Venta de medicamentos, productos de cuidado personal y atención farmacéutica.</p>
-        <p><strong>Horario:</strong> LUNES A DOMINGO - 8:00 AM a 10:00 PM</p>
+
+        <div class="horario-tabla">
+            <div class="horario-dias">
+                LUNES A DOMINGO
+            </div>
+            <div class="horario-hora">
+                8:00 AM - 10:00 PM
+            </div>
+        </div>
     </section>
 
     <section id="contacto">
-        <h2>¿Necesitas una consulta?</h2>
-        <p>Escríbenos directamente por WhatsApp para consultar stock o precios.</p>
+        <h2>¿Alguna duda?</h2>
+        <p>¡Consulta en nuestro Facebook oficial de Boticas VitaNova!</p>
+        
+        <div class="consulta-div">
+            <a href="https://www.facebook.com/profile.php?id=61590120628820" class="btn-facebook">
+                Facebook
+            </a>
+        </div>
     </section>
-
     <footer>
         <p>&copy; 2026 Botica Vitanova - Nazca, Ica</p>
     </footer>

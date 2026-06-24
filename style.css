@@ -1,0 +1,79 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    text-align: center; 
+    color: #333; 
+}
+header { 
+    background-color: #007bff; 
+    color: white; 
+    padding: 1rem 0; 
+}
+section { 
+    padding: 2rem; 
+}
+        .btn-whatsapp { display: inline-block; background-color: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; }
+footer { 
+    background-color: #f4f4f4; 
+    padding: 1rem; 
+    font-size: 0.9rem; 
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.btn-facebook {
+    display: inline-block; 
+    background-color: #1877f2; 
+    color: white; 
+    padding: 12px 25px; 
+    text-decoration: none; 
+    border-radius: 50px; 
+    font-weight: bold; 
+    transition: background 0.3s;
+}
+.btn-facebook:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.5;
+}
+.consulta-div {
+    display: flex; 
+    gap: 15px; 
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+.horario-tabla {
+    max-width: 400px; 
+    margin: 20px auto; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    border: 2px solid #007bff; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.horario-dias {
+    background-color: #007bff; 
+    color: white; 
+    padding: 10px; 
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    letter-spacing: 1px;
+}
+.horario-hora {
+    background-color: #e9f7ff; 
+    padding: 15px; 
+    font-weight: bold; 
+    font-size: 1.5rem; 
+    color: #333;
+}
+.banner-vitanova {
+    width: 100%; 
+    display: block;
+}
+.logo-vitanova {
+    max-width: 140px;
+}
