@@ -108,6 +108,17 @@ footer {
     }
 }
 
+.icon-demostrative {
+    border: 1px solid #006aff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    background-color: #4696ff;
+}
+
 #servicios, #contacto, #ubicacion, #feedback {
     background-color: #f0fffe;
     border: 1px solid #e1e4e8;
@@ -116,6 +127,27 @@ footer {
     margin: 20px auto;
     max-width: 900px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.article-vitawiki {
+    line-height: 1.8; /* Aumentar un poco más para mayor legibilidad */
+    color: #333;      /* Un color un poco más oscuro para que el texto resalte */
+    background-color: #ffffff; /* Fondo blanco puro hace que el contenido destaque más */
+    border: 1px solid #e1e4e8;
+    border-radius: 20px;
+    padding: 40px;    /* Aumentamos el padding interno para que nada esté pegado al borde */
+    margin: 30px auto; /* Más espacio entre artículos */
+    max-width: 800px; /* Reducir un poco el ancho mejora la lectura (no cansa tanto la vista) */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05); /* Sombra más suave y profesional */
+    text-align: left; /* Alineamos el texto a la izquierda, que es el estándar para leer párrafos */
+}
+
+.article-vitawiki h3 {
+    color: #004289;
+    border-bottom: 3px solid #007bff; /* Un poco más grueso para dar jerarquía */
+    padding-bottom: 5px; /* Espacio entre el texto y la línea */
+    margin-bottom: 20px;
+    display: inline-block;
 }
 
 .menu-toggle {
