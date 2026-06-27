@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
 body { 
-    font-family: Arial, sans-serif; 
+    font-family: 'Nunito', sans-serif;
     margin: 0; 
     padding: 0; 
     text-align: center; 
     color: #333; 
+    animation: fadeIn 1.2s ease-in;
 }
 header { 
-    background-color: #007bff; 
+    background-color: #2c92ff; 
     color: white; 
     padding: 1rem 0;
     position: relative;
@@ -32,17 +34,24 @@ footer {
     display: inline-block; 
     background-color: #1877f2; 
     color: white; 
-    padding: 12px 25px; 
+    padding: 14px 30px; 
     text-decoration: none; 
     border-radius: 50px; 
-    font-weight: bold; 
-    transition: background 0.3s;
+    font-weight: 900; 
+    font-size: 1.1rem;
+    box-shadow: 0 6px #0d4da3;
+    transition: all 0.2s ease;
 }
+
 .btn-facebook:hover {
-    filter: brightness(1.2);
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: 0.5;
+    transform: translateY(-3px);
+    box-shadow: 0 9px #0d4da3;
+    filter: brightness(1.1);
+}
+
+.btn-facebook:active {
+    transform: translateY(3px);
+    box-shadow: 0 3px #0d4da3;
 }
 .consulta-div {
     display: flex; 
@@ -52,11 +61,16 @@ footer {
 }
 .horario-tabla {
     max-width: 400px; 
-    margin: 20px auto; 
-    border-radius: 10px; 
+    margin: 25px auto; 
+    border-radius: 20px; 
     overflow: hidden; 
-    border: 2px solid #007bff; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 3px dashed #007bff;
+    transform: rotate(-0.5deg);
+    transition: transform 0.3s ease;
+}
+
+.horario-tabla:hover {
+    transform: rotate(1.5deg) scale(1.03);
 }
 .horario-dias {
     background-color: #007bff; 
@@ -78,7 +92,12 @@ footer {
     display: block;
 }
 .logo-vitanova {
-    max-width: 140px;
+    max-width: 500px;
+    background-color: rgb(195, 242, 255);
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 4px 4px 0px #004289;
+    border: 2px solid #004289;
 }
 .mapa-container {
     margin: 20px auto;
@@ -119,33 +138,55 @@ footer {
     background-color: #4696ff;
 }
 
+@keyframes jiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.icon-placeholder, .icon-demostrative {
+    transition: transform 0.3s ease;
+}
+
+.icon-placeholder:hover, .icon-demostrative:hover {
+    animation: jiggle 0.5s ease infinite;
+    cursor: pointer;
+}
+
 #servicios, #contacto, #ubicacion, #feedback {
-    background-color: #f0fffe;
-    border: 1px solid #e1e4e8;
-    border-radius: 20px;
-    padding: 30px 10px;
-    margin: 20px auto;
+    background-color: #ffffff;
+    border: 3px solid #007bff;
+    border-radius: 30px 15px 30px 15px;
+    padding: 30px 20px;
+    margin: 30px auto;
     max-width: 900px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 6px 6px 0px #004289;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#servicios:hover, #contacto:hover, #ubicacion:hover, #feedback:hover {
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 10px 10px 0px #004289;
 }
 
 .article-vitawiki {
-    line-height: 1.8; /* Aumentar un poco más para mayor legibilidad */
-    color: #333;      /* Un color un poco más oscuro para que el texto resalte */
-    background-color: #ffffff; /* Fondo blanco puro hace que el contenido destaque más */
+    line-height: 1.8;
+    color: #333;
+    background-color: #ffffff;
     border: 1px solid #e1e4e8;
     border-radius: 20px;
-    padding: 40px;    /* Aumentamos el padding interno para que nada esté pegado al borde */
-    margin: 30px auto; /* Más espacio entre artículos */
-    max-width: 800px; /* Reducir un poco el ancho mejora la lectura (no cansa tanto la vista) */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05); /* Sombra más suave y profesional */
-    text-align: left; /* Alineamos el texto a la izquierda, que es el estándar para leer párrafos */
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    text-align: left;
 }
 
 .article-vitawiki h3 {
     color: #004289;
-    border-bottom: 3px solid #007bff; /* Un poco más grueso para dar jerarquía */
-    padding-bottom: 5px; /* Espacio entre el texto y la línea */
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 5px;
     margin-bottom: 20px;
     display: inline-block;
 }
@@ -167,26 +208,32 @@ footer {
     display: flex !important;
 }
 
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-    font-weight: bold;
-}
-
 .nav-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     list-style: none;
-    padding: 0 10px;
-    margin: 0;
+    padding: 10px;
+    margin: 10px auto;
     background-color: #004289;
+    border-radius: 20px;
+    max-width: max-content;
 }
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-weight: 700;
+    border-radius: 15px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
 .nav-links li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Un fondo sutil */
-    color: #e0e0e0;
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.1);
 }
 @media (max-width: 600px) {
     .menu-toggle { display: block; }
@@ -209,4 +256,17 @@ footer {
 
 .burger-icon {
     width: 40px;
+}
+.brand-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-eslogan {
+    margin: 1;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
 }
