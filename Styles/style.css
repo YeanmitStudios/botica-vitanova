@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+body { 
+    font-family: 'Nunito', sans-serif;
+    margin: 0; 
+    padding: 0; 
+    text-align: center; 
+    color: #333; 
+    animation: fadeIn 1.2s ease-in;
+}
+header { 
+    background-color: #2c92ff; 
+    color: white; 
+    padding: 1rem 0;
+    position: relative;
+    z-index: 10;
+}
+section { 
+    padding: 2rem; 
+}
+
+footer { 
+    background-color: #f4f4f4; 
+    padding: 1rem; 
+    font-size: 0.9rem; 
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 30px;
+}
+.btn-facebook {
+    display: inline-block; 
+    background-color: #1877f2; 
+    color: white; 
+    padding: 14px 30px; 
+    text-decoration: none; 
+    border-radius: 50px; 
+    font-weight: 900; 
+    font-size: 1.1rem;
+    box-shadow: 0 6px #0d4da3;
+    transition: all 0.2s ease;
+}
+
+.btn-facebook:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px #0d4da3;
+    filter: brightness(1.1);
+}
+
+.btn-facebook:active {
+    transform: translateY(3px);
+    box-shadow: 0 3px #0d4da3;
+}
+.consulta-div {
+    display: flex; 
+    gap: 15px; 
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+.horario-tabla {
+    max-width: 400px; 
+    margin: 25px auto; 
+    border-radius: 20px; 
+    overflow: hidden; 
+    border: 3px dashed #007bff;
+    transform: rotate(-0.5deg);
+    transition: transform 0.3s ease;
+}
+
+.horario-tabla:hover {
+    transform: rotate(1.5deg) scale(1.03);
+}
+.horario-dias {
+    background-color: #007bff; 
+    color: white; 
+    padding: 10px; 
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    letter-spacing: 1px;
+}
+.horario-hora {
+    background-color: #e9f7ff; 
+    padding: 15px; 
+    font-weight: bold; 
+    font-size: 1.5rem; 
+    color: #333;
+}
+.banner-vitanova {
+    width: 100%; 
+    display: block;
+}
+.logo-vitanova {
+    max-width: 500px;
+    background-color: rgb(195, 242, 255);
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 4px 4px 0px #004289;
+    border: 2px solid #004289;
+}
+.mapa-container {
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+    width: 90%;
+    max-width: 800px;
+}
+.mapa-container iframe {
+    width: 100%;
+    height: 450px;
+    display: block;
+    border: 0;
+}
+.icon-placeholder {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .mapa-container iframe {
+        height: 300px;
+    }
+}
+
+.icon-demostrative {
+    border: 1px solid #006aff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 150px;
+    height: 140px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    background-color: #f9fbfd;
+}
+
+@keyframes jiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.icon-placeholder, .icon-demostrative {
+    transition: transform 0.3s ease;
+}
+
+.icon-placeholder:hover, .icon-demostrative:hover {
+    animation: jiggle 0.5s ease infinite;
+    cursor: pointer;
+}
+
+#servicios, #contacto, #ubicacion, #feedback, #ofertas {
+    background-color: #ffffff;
+    border: 3px solid #007bff;
+    border-radius: 30px 15px 30px 15px;
+    padding: 30px 20px;
+    margin: 30px auto;
+    max-width: 900px;
+    box-shadow: 6px 6px 0px #004289;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#servicios:hover, #contacto:hover, #ubicacion:hover, #feedback:hover, #ofertas:hover {
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 10px 10px 0px #004289;
+}
+
+.article-vitawiki {
+    line-height: 1.8;
+    color: #333;
+    background-color: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.article-vitawiki h3 {
+    color: #004289;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.nav-links.active {
+    display: flex !important;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #004289;
+    border-radius: 20px;
+    max-width: max-content;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-weight: 700;
+    border-radius: 15px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.nav-links li a:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.1);
+}
+.container-section-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-style {
+    max-width: 60px;
+    height: auto;
+    display: block;
+}
+.icon-style:hover {
+    animation: jiggle 0.5s ease infinite;
+    cursor: pointer;
+}
+@media (max-width: 600px) {
+    .menu-toggle { display: block; }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #004289;
+        flex-direction: column;
+        z-index: 12;
+    }
+    
+    .nav-links.active { 
+        display: flex !important; 
+    }
+
+    .header-container {
+        padding: 15px 10px;
+    }
+
+    .logo-vitanova {
+        max-width: 220px;
+        padding: 8px 15px;
+        box-shadow: 3px 3px 0px #002654;
+    }
+
+    .header-eslogan {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        padding: 0 10px;
+        line-height: 1.3;
+    }
+}
+
+.burger-icon {
+    width: 40px;
+}
+.brand-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-eslogan {
+    margin: 1;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.vitawiki-title, .resources-title {
+    color: #004289;
+    margin-top: 40px;
+    font-weight: 900;
+}
+
+.vitawiki-subtitle, .resources-subtitle {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.resources-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.resource-card-section {
+    background-color: #ffffff;
+    border: 3px solid #007bff;
+    border-radius: 30px 15px 30px 15px;
+    padding: 30px 20px;
+    margin: 40px auto;
+    box-shadow: 6px 6px 0px #004289;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card-section:hover {
+    transform: translateY(-3px) rotate(0.5deg);
+    box-shadow: 9px 9px 0px #004289;
+}
+
+.resource-card-section h2 {
+    color: #004289;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.resource-item {
+    background-color: #ffffff;
+    border: 1.5px dashed #1e73be;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* Centra el título y la imagen horizontalmente */
+    justify-content: space-between; /* Deja el título arriba y la imagen centrada abajo */
+    min-height: 260px;          /* Obliga a todas las tarjetas a medir lo mismo de alto */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Un toque sutil de sombra */
+    transition: transform 0.2s;
+}
+
+.resource-item:hover {
+    transform: translateY(-3px);
+}
+
+.resource-item h3 {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+}
