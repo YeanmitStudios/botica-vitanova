@@ -13,14 +13,14 @@ def create_html_resources(system_resources_list = None, user_resources_list = No
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="Resources/System_assets/LOGO_OFICIAL.svg">
-    <title>Vita Wiki - Botica Vitanova</title>
+    <title>Recursos - Botica Vitanova</title>
     <link rel="stylesheet" href="Styles/style.css">
     <script src="Scripts/script.js"></script>
 </head>
 <body>
 
     <header>
-        <button class="menu-toggle" onclick="toggleMenu()"><img src="burger-icon.svg" class="burger-icon"></button>
+        <button class="menu-toggle" onclick="toggleMenu()"><img src="Resources/System_assets/burger-icon.svg" class="burger-icon"></button>
 
         <div class="header-container">
             
@@ -34,7 +34,9 @@ def create_html_resources(system_resources_list = None, user_resources_list = No
         <nav class="navigation">
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
                 <li><a href="vitawiki.html">Vita Wiki</a></li>
+                <li><a href="nosotros.html">Sobre nosotros</a></li>
                 <li><a href="resource.html">Recursos</a></li>
             </ul>
         </nav>
@@ -75,6 +77,9 @@ def create_html_resources(system_resources_list = None, user_resources_list = No
     item_template = '''<section class="resource-item">
                     <h3>{{ resource-name }}</h3>
                     <img src="{{ resource-path }}" alt="{{ alt-resource-name }}" class="icon-demostrative">
+                    <a class="btn-download" href="{{ resource-path }}" download="{{ alt-resource-name }}">
+                        Descargar
+                    </a>
                 </section>'''
     
     system_items = ""
