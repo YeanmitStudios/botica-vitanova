@@ -297,7 +297,7 @@ footer {
     padding: 0 20px;
 }
 
-.resource-card-section {
+.generic-card-section {
     background-color: #ffffff;
     border: 3px solid #007bff;
     border-radius: 30px 15px 30px 15px;
@@ -307,12 +307,12 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.resource-card-section:hover {
+.generic-card-section:hover {
     transform: translateY(-3px) rotate(0.5deg);
     box-shadow: 9px 9px 0px #004289;
 }
 
-.resource-card-section h2 {
+.generic-card-section h2 {
     color: #004289;
     font-weight: 900;
     margin-bottom: 25px;
@@ -325,6 +325,13 @@ footer {
     padding: 20px;
 }
 
+.nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 380px)); 
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; 
+}
 .resource-item {
     background-color: #ffffff;
     border: 1.5px dashed #1e73be;

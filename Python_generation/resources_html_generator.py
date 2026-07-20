@@ -47,7 +47,7 @@ def create_html_resources(system_resources_list = None, user_resources_list = No
 
     <main class="resources-container">
         
-        <div id="System-resources" class="resource-card-section">
+        <div id="System-resources" class="generic-card-section">
             <div class="container-section-icon">
                 <h2>Recursos del sistema!</h2>
             </div>
@@ -56,7 +56,7 @@ def create_html_resources(system_resources_list = None, user_resources_list = No
             </div>
         </div>
 
-        <div id="User-resources" class="resource-card-section">
+        <div id="User-resources" class="generic-card-section">
             <div class="container-section-icon">
                 <h2>Recursos de usuario!</h2>
             </div>
